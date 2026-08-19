@@ -12,7 +12,19 @@ html {
 body {
   margin: 0
 }
-
+.slider-item-wrapper {
+  display: flex;
+  width: 100%;
+  aspect-ratio: 16/9; /* This will make it 16:9 ratio */
+  min-height: 400px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  justify-content: flex-start;
+  align-items: center;
+  background-size: cover !important;
+  background-position: 50% 50% !important;
+  background-repeat: no-repeat !important;
+}
 article,
 aside,
 details,
