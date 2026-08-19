@@ -1710,6 +1710,9 @@
                 list.sort(function(a, b) { return a.name.localeCompare(b.name); });
             } else if (currentSort === 'name-desc') {
                 list.sort(function(a, b) { return b.name.localeCompare(a.name); });
+            } else {
+                // Default sorting: show Building Materials first
+                list.sort(function(a, b) { return (a.isBuildingMaterial ? 0 : 1) - (b.isBuildingMaterial ? 0 : 1); });
             }
             return list;
         }
