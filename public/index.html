@@ -93,26 +93,93 @@
     <link href="images/favicon/favicon-16x16.png" rel="icon" type="image/png" sizes="16x16">
     <link href="images/favicon/favicon-32x32.png" rel="icon" type="image/png" sizes="32x32">
     <link href="images/favicon/favicon-192x192.png" rel="icon" type="image/png" sizes="192x192">
-    <link href="images/favicon/apple-touch-icon.png" rel="apple-touch-icon"><style>
-    /* Mobile optimization */
-    @media screen and (max-width: 768px) {
-        .video-section {
-            min-height: 100vh !important;
-            height: 100vh !important;
-            background-size: 100% 100% !important;
-            background-position: 50% 50% !important;
-        }
-    }
+    <link href="images/favicon/apple-touch-icon.png" rel="apple-touch-icon"><style>/* ===== Full Width Image Banner - Separate Section ===== */
+.full-image-banner {
+    background-image: url('images/posternew.png');
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height:120vh;
+    height: 120vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
 
-    @media screen and (max-width: 480px) {
-        .video-section {
-            min-height: 100vh !important;
-            height: 100vh !important;
-            background-size: 100% 100% !important;
-            background-position: 50% 50% !important;
-        }
+.full-image-banner .container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.full-image-banner .banner-inner {
+    width: 100%;
+    height: 100vh;
+}
+/* Mobile Optimization - Cover with best positioning */
+@media screen and (max-width: 768px) {
+    .full-image-banner {
+        min-height: 30vh !important;
+        height: 30vh !important;
+        max-height: 30vh !important;
+        background-size: cover !important;
+        background-position: 50% 50% !important;
+        background-repeat: no-repeat !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        overflow: hidden !important;
     }
-</style>
+    
+    .full-image-banner .container {
+        height: 30vh !important;
+        max-height: 30vh !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    
+    .full-image-banner .banner-inner {
+        height: 30vh !important;
+        max-height: 30vh !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .full-image-banner {
+        min-height: 30vh !important;
+        height: 30vh !important;
+        max-height: 30vh !important;
+        background-size: cover !important;
+        background-position: 50% 50% !important;
+        background-repeat: no-repeat !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        overflow: hidden !important;
+    }
+    
+    .full-image-banner .container {
+        height: 30vh !important;
+        max-height: 30vh !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    
+    .full-image-banner .banner-inner {
+        height: 30vh !important;
+        max-height: 30vh !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+}</style>
 </head>
 
 <body>
@@ -774,15 +841,15 @@ document.addEventListener('DOMContentLoaded', renderProducts);
         </div>
     </div>
 </section>
-      <section class="video-section" style="background-image: url('images/posternew.png'); background-position: 50% 50%; background-size: 100% 100%; background-repeat: no-repeat; min-height: 100vh; height: 100vh; display: flex; align-items: center; width: 100%; margin: 0; padding: 0; overflow: hidden;">
-    <div class="container w-container" style="width: 100%; max-width: 100%; margin: 0; padding: 0;">
-        <div data-w-id="98d424f9-416f-432e-b02b-76047744cfc9" style="opacity:1; width: 100%;" class="video-inner">
+<!-- Full Width Image Banner Section -->
+<section class="full-image-banner">
+    <div class="container w-container">
+        <div data-w-id="98d424f9-416f-432e-b02b-76047744cfc9" style="opacity:1" class="banner-inner">
             <!-- All text and button removed as requested -->
         </div>
     </div>
 </section>
-
-
+      
         <div class="best-sell-product-section">
     <div class="container w-container">
         <div class="section-title-block block-center">
