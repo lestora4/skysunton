@@ -1,0 +1,312 @@
+/* ---- Header account label / logout (dropdown, all pages) ---- */
+.account-icon-link {
+  position: relative;
+}
+.account-dropdown {
+  display: none;
+  position: absolute;
+  top: calc(100% + 14px);
+  right: -8px;
+  min-width: 190px;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.14);
+  padding: 12px 14px;
+  z-index: 100;
+  text-align: left;
+}
+.account-dropdown.is-open {
+  display: block;
+}
+.account-dropdown-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1a1a1a;
+  padding-bottom: 8px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid #f0f0f0;
+  white-space: nowrap;
+}
+.account-dropdown-link {
+  display: block;
+  padding: 9px 0;
+  font-size: 14px;
+  color: #333;
+  text-decoration: none;
+  cursor: pointer;
+}
+.account-dropdown-link.logout-link {
+  color: #b3261e;
+  border-top: 1px solid #f0f0f0;
+  margin-top: 2px;
+}
+
+/* On small screens keep the account icon compact and let the dropdown
+   hang from the right edge without overflowing the viewport */
+@media screen and (max-width: 479px) {
+  .account-dropdown {
+    right: -50px;
+    min-width: 170px;
+  }
+}
+
+/* ---- Newsletter inline message (reserved-height so footer layout never shifts) ---- */
+.newsletter-msg {
+  min-height: 20px;
+  font-size: 13px;
+  margin-top: 8px;
+}
+.newsletter-msg.is-success {
+  color: #1e7a34;
+}
+.newsletter-msg.is-error {
+  color: #b3261e;
+}
+
+
+/* ---- Favorite / wishlist heart toggle button on product cards ---- */
+.product-thumbnail {
+  position: relative;
+}
+.fav-toggle-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #333;
+  z-index: 5;
+  padding: 0;
+  transition: transform 0.15s ease, color 0.15s ease;
+}
+.fav-toggle-btn svg {
+  width: 18px;
+  height: 18px;
+}
+.fav-toggle-btn:hover {
+  transform: scale(1.08);
+}
+.fav-toggle-btn.is-favorited {
+  color: #e11d48;
+}
+.fav-toggle-btn.is-favorited svg {
+  fill: #e11d48;
+}
+
+/* Product detail page wishlist button (not the floating heart) */
+.wishlist-btn.fav-toggle-btn {
+  position: static;
+  width: auto;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: #fff;
+  padding: 10px 16px;
+  display: inline-flex;
+  gap: 8px;
+  box-shadow: none;
+}
+.wishlist-btn.fav-toggle-btn.is-favorited {
+  border-color: #e11d48;
+  background: #fff5f6;
+}
+
+/* ---- Auth pages (login / signup) ---- */
+.auth-section {
+  padding: 80px 0 100px;
+  min-height: 55vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  padding: 40px 36px;
+  border: 1px solid #eee;
+}
+.auth-card h1 {
+  font-size: 26px;
+  margin-bottom: 6px;
+  font-weight: 700;
+}
+.auth-card .auth-subtitle {
+  color: #777;
+  font-size: 14px;
+  margin-bottom: 28px;
+}
+.auth-field {
+  margin-bottom: 18px;
+}
+.auth-field label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #333;
+}
+.auth-field input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+.auth-field input:focus {
+  border-color: #222;
+}
+.auth-submit-btn {
+  width: 100%;
+  padding: 13px 14px;
+  border: none;
+  border-radius: 8px;
+  background: #1a1a1a;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 6px;
+  transition: opacity 0.15s ease;
+}
+.auth-submit-btn:hover {
+  opacity: 0.88;
+}
+.auth-submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.auth-switch-line {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #555;
+}
+.auth-switch-line a {
+  color: #1a1a1a;
+  font-weight: 600;
+  text-decoration: underline;
+}
+.auth-error {
+  display: none;
+  background: #fdecea;
+  color: #b3261e;
+  border: 1px solid #f5c6c2;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 13px;
+  margin-bottom: 18px;
+}
+.auth-error.is-visible {
+  display: block;
+}
+.auth-success {
+  display: none;
+  background: #eaf7ec;
+  color: #1e7a34;
+  border: 1px solid #c5e8cc;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 13px;
+  margin-bottom: 18px;
+}
+.auth-success.is-visible {
+  display: block;
+}
+
+/* ---- Dashboard ---- */
+.dashboard-section {
+  padding: 60px 0 100px;
+}
+.dashboard-welcome {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.dashboard-sub {
+  color: #777;
+  font-size: 14px;
+  margin-bottom: 36px;
+}
+.dashboard-empty {
+  text-align: center;
+  padding: 60px 20px;
+  border: 1px dashed #ddd;
+  border-radius: 12px;
+  color: #777;
+}
+.dashboard-empty a {
+  color: #1a1a1a;
+  font-weight: 600;
+  text-decoration: underline;
+}
+.favorites-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 22px;
+}
+.favorite-card {
+  border: 1px solid #eee;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  transition: box-shadow 0.15s ease;
+}
+.favorite-card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+.favorite-card-img {
+  width: 100%;
+  height: 160px;
+  object-fit: contain;
+  background: #f7f7f7;
+  padding: 14px;
+  box-sizing: border-box;
+}
+.favorite-card-body {
+  padding: 14px 16px 16px;
+}
+.favorite-card-name {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  line-height: 1.4;
+  min-height: 38px;
+}
+.favorite-card-actions {
+  display: flex;
+  gap: 10px;
+}
+.favorite-card-actions a,
+.favorite-card-actions button {
+  flex: 1;
+  text-align: center;
+  padding: 9px 10px;
+  border-radius: 7px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  background: #fff;
+  color: #1a1a1a;
+  text-decoration: none;
+}
+.favorite-card-actions .remove-fav-btn {
+  border-color: #f5c6c2;
+  color: #b3261e;
+}
