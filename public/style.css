@@ -6055,7 +6055,7 @@ a {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  background-image: url("images/slider1.png");
+  background-image: url("images/slider1new.png");
   background-position: 50% 50%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -13220,5 +13220,72 @@ a {
   .whatsapp-float-icon {
     width: 26px;
     height: 26px;
+  }
+}
+
+/* ===== Slow auto-scrolling poster carousel (Sky Sunton) ===== */
+.poster-carousel-wrapper {
+  overflow: hidden;
+  position: relative;
+}
+
+.poster-carousel-wrapper::before,
+.poster-carousel-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 60px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.poster-carousel-wrapper::before {
+  left: 0;
+  background: linear-gradient(90deg, #fff, rgba(255, 255, 255, 0));
+}
+
+.poster-carousel-wrapper::after {
+  right: 0;
+  background: linear-gradient(270deg, #fff, rgba(255, 255, 255, 0));
+}
+
+.poster-carousel-track {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  width: max-content;
+  grid-column-gap: 30px;
+  gap: 30px;
+  -ms-grid-columns: none;
+  grid-template-columns: none;
+  -webkit-animation: posterCarouselScroll 32s linear infinite;
+  animation: posterCarouselScroll 32s linear infinite;
+  will-change: transform;
+}
+
+.poster-carousel-wrapper:hover .poster-carousel-track {
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+.poster-carousel-track .top-category-item {
+  flex: 0 0 auto;
+  width: min(320px, 78vw);
+}
+
+@-webkit-keyframes posterCarouselScroll {
+  from { -webkit-transform: translateX(0); transform: translateX(0); }
+  to { -webkit-transform: translateX(-50%); transform: translateX(-50%); }
+}
+
+@keyframes posterCarouselScroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@media screen and (max-width: 479px) {
+  .poster-carousel-track {
+    -webkit-animation-duration: 22s;
+    animation-duration: 22s;
   }
 }

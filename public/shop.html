@@ -1278,6 +1278,36 @@
         <script>
         // Product catalog (kept in sync with index.html)
         const products = [
+    // === EGGS & DAIRY ===
+    {
+        id: 42,
+        name: "White Eggs",
+        image: "whiteegg.png",
+        isBuildingMaterial: false,
+        slug: "white-eggs"
+    },
+    {
+        id: 43,
+        name: "Brown Eggs",
+        image: "brownegg.png",
+        isBuildingMaterial: false,
+        slug: "brown-eggs"
+    },
+    // === FRESH VEGETABLES ===
+    {
+        id: 44,
+        name: "Ginger",
+        image: "ginger.png",
+        isBuildingMaterial: false,
+        slug: "ginger"
+    },
+    {
+        id: 45,
+        name: "Garlic",
+        image: "garlic.png",
+        isBuildingMaterial: false,
+        slug: "garlic"
+    },
     // === FARM FRESH PRODUCTS (Frozen & Chicken & Meat, Dairy) ===
     {
         id: 1,
@@ -1389,13 +1419,6 @@
         subCategory: "Chicken Liver",
         isBuildingMaterial: false,
         slug: "bellaves-frozen-chicken-liver-450g"
-    },
-    {
-        id: 15,
-        name: "Onion",
-        image: "onion1.png",
-        isBuildingMaterial: false,
-        slug: "onion"
     },
     // === BUILDING MATERIALS ===
     {
@@ -1592,13 +1615,13 @@
         // Assign a display category to each product for filtering
         function getDisplayCategory(product) {
             if (product.isBuildingMaterial) return 'Building Materials';
-            if (product.name.includes('Nadec') || product.name.includes('Milk')) return 'Eggs & Dairy';
-            if (product.name === 'Onion') return 'Onion';
+            if (product.name.includes('Nadec') || product.name.includes('Milk') || product.name.includes('Egg')) return 'Eggs & Dairy';
+            if (product.name === 'Ginger' || product.name === 'Garlic') return 'Fresh Vegetables';
             return 'Frozen';
         }
         products.forEach(function(p) { p.displayCategory = getDisplayCategory(p); });
 
-        var CATEGORY_ORDER = ['Building Materials', 'Eggs & Dairy', 'Frozen', 'Onion'];
+        var CATEGORY_ORDER = ['Building Materials', 'Eggs & Dairy', 'Frozen', 'Fresh Vegetables'];
         // Sub-categories shown nested under a parent category
         var SUBCATEGORIES_BY_CATEGORY = {
             'Frozen': ['Chicken & Meat', 'Chicken Gizzard', 'Chicken Liver']
@@ -1792,17 +1815,17 @@
             </span>
             <span class="footer-contact-text">+971 56 921 0705</span>
         </a>
-        <a href="https://wa.me/971529074331" target="_blank" rel="noopener" class="footer-contact-item">
+        <a href="https://wa.me/971526711154" target="_blank" rel="noopener" class="footer-contact-item">
             <span class="footer-contact-icon">
                 <i class="fab fa-whatsapp fa-lg"></i>
             </span>
-            <span class="footer-contact-text">+971 52 907 4331</span>
+            <span class="footer-contact-text">+971 52 671 1154</span>
         </a>
-        <a href="tel:+97145910933" class="footer-contact-item">
+        <a href="tel:+97145656396" class="footer-contact-item">
             <span class="footer-contact-icon">
                 <i class="fas fa-tty fa-lg"></i>
             </span>
-            <span class="footer-contact-text">+971 4 591 0933</span>
+            <span class="footer-contact-text">+971 4 565 6396</span>
         </a>
     </div>
 </div>
