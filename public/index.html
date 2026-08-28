@@ -93,7 +93,26 @@
     <link href="images/favicon/favicon-16x16.png" rel="icon" type="image/png" sizes="16x16">
     <link href="images/favicon/favicon-32x32.png" rel="icon" type="image/png" sizes="32x32">
     <link href="images/favicon/favicon-192x192.png" rel="icon" type="image/png" sizes="192x192">
-    <link href="images/favicon/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="images/favicon/apple-touch-icon.png" rel="apple-touch-icon"><style>
+    /* Mobile optimization */
+    @media screen and (max-width: 768px) {
+        .video-section {
+            min-height: 100vh !important;
+            height: 100vh !important;
+            background-size: 100% 100% !important;
+            background-position: 50% 50% !important;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .video-section {
+            min-height: 100vh !important;
+            height: 100vh !important;
+            background-size: 100% 100% !important;
+            background-position: 50% 50% !important;
+        }
+    }
+</style>
 </head>
 
 <body>
@@ -755,13 +774,15 @@ document.addEventListener('DOMContentLoaded', renderProducts);
         </div>
     </div>
 </section>
-      <section class="video-section" style="background-image: url('images/posternew.png'); background-position: 50% 50%; background-size: 100% 100%; background-repeat: no-repeat; min-height: 100vh; height: 100vh; display: flex; align-items: center; width: 100%; margin: 0; padding: 0;">
+      <section class="video-section" style="background-image: url('images/posternew.png'); background-position: 50% 50%; background-size: 100% 100%; background-repeat: no-repeat; min-height: 100vh; height: 100vh; display: flex; align-items: center; width: 100%; margin: 0; padding: 0; overflow: hidden;">
     <div class="container w-container" style="width: 100%; max-width: 100%; margin: 0; padding: 0;">
-        <div data-w-id="98d424f9-416f-432e-b02b-76047744cfc9" style="opacity:1" class="video-inner" style="width: 100%;">
+        <div data-w-id="98d424f9-416f-432e-b02b-76047744cfc9" style="opacity:1; width: 100%;" class="video-inner">
             <!-- All text and button removed as requested -->
         </div>
     </div>
 </section>
+
+
         <div class="best-sell-product-section">
     <div class="container w-container">
         <div class="section-title-block block-center">
